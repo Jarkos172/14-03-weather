@@ -1,16 +1,15 @@
-from services.excel_files import save_to_excel
 from services.openweather_api import get_weather
+from services.excel_files import save_to_excel, read_excel
 from services.dashboard import render_dashboard
 import time
 
-
-
 while True:
-      weather = get_weather("glasgow")
-      save_to_excel([weather])
-      print("pobieram i zapisuje dane")
-
-      render_dashboard('lisbon1.xlsx')
-      time.sleep(10)
+    weather = get_weather()
+    save_to_excel([weather])
+    print("Pobieram i zapisuję dane")
+    time.sleep(5)
 
 
+result = read_excel("weather_data.xlsx")
+
+# render_dashboard("lisbon.xlsx")
