@@ -1,6 +1,12 @@
 .venv
 .idea
 
+/venv
+/idea
+
+venv
+idea
+
 .env
 
 services/__pycache__

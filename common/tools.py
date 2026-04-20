@@ -1,6 +1,6 @@
-def kelvin_na_celsjusze(kelvin):
-    return kelvin - 273.15
+def kelvin_to_celsius(temp):
+    return round(temp - 273.15)
 
-
-def ms_na_kmh(ms):
-    return ms * 3.6
+def ms_to_km(speed_ms):
+    kmh = speed_ms * 3.6
+    return round(kmh, 2)
